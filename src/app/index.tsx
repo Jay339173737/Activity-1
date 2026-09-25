@@ -1,23 +1,31 @@
-import { View, Text } from 'react-native'
-import app from 'react'
+import { StyleSheet, Text, View } from "react-native";
 
-const index = () => {
+const Index = () => {
   return (
-    <View>
-      <Text>Shoe Shop</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Shoe Shop</Text>
+      <Text style={styles.subtitle}>Welcome! Find your perfect pair.</Text>
     </View>
-  )
-}
+  );
+};
 
-export default app
-const styles = {StyleSheet.create({
-Container: {
+export default Index;
+
+const styles = StyleSheet.create({
+  container: {
     flex: 1,
-    flexDirection: 'column',
-},
-    text:{
-        color: 'black',
-        fontSize: 20,
-        fontWeight: 'bold',
-        textAlign: 'center',
-    }
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#fff",
+  },
+  title: {
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "black",
+    marginBottom: 8,
+  },
+  subtitle: {
+    fontSize: 16,
+    color: "gray",
+  },
+});
